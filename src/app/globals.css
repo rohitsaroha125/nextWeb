@@ -15,3 +15,52 @@
     --background-end-rgb: 0, 0, 0;
   }
 }
+
+.loadingBox{
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(0,0,0,0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loader-37 {
+	border-right: .1em solid #fff;
+	border-radius: 100%;
+	animation: loader-37 800ms linear infinite;
+	&:before,
+	&:after {
+		content: '';
+		width: .8em;
+		height: .8em;
+		display: block;
+		position: absolute;
+		top: calc(50% - .4em);
+		left: calc(50% - .4em);
+		border-left: .08em solid #fff;
+		border-radius: 100%;
+		animation: loader-37 400ms linear infinite reverse;
+	}
+	&:after {
+		width: .6em;
+		height: .6em;
+		top: calc(50% - .3em);
+		left: calc(50% - .3em);
+		border: 0;
+		border-right: .05em solid #fff;
+		animation: none;
+	}
+}
+
+@keyframes loader-37 {
+	from {
+		transform: rotate(360deg);
+	}
+	to {
+		transform: rotate(0deg);
+	}
+}
