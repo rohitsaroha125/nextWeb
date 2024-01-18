@@ -1,0 +1,87 @@
+.activeNavLink{
+    border-radius: 50px;
+    font-weight: 600;
+}
+
+.navBar{
+    position: relative;
+}
+
+.navbarPc{
+    display: flex;
+}
+
+.mobileMenu{
+    background: var(--color-primary);
+    height: 100vh;
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    display: none;
+    flex-direction: column;
+    width: 60vw;
+    justify-content: center;
+    gap:60px
+}
+
+.btn2 {
+    position: absolute;
+    z-index: 99999;
+    width: 30px;
+    height: 30px;
+    top: 7.5px;
+    right: 0rem;
+    transition-duration: 0.5s;
+    display: none;
+  }
+  .btn2 .icon {
+    transition-duration: 0.5s;
+    position: absolute;
+    height: 4px;
+    width: 30px;
+    top: 30px;
+    background-color: var(--color-white);
+  }
+  .btn2 .icon:before {
+    transition-duration: 0.5s;
+    position: absolute;
+    width: 30px;
+    height: 4px;
+    background-color: var(--color-white);
+    content: "";
+    top: -10px;
+  }
+  .btn2 .icon:after {
+    transition-duration: 0.5s;
+    position: absolute;
+    width: 30px;
+    height: 4px;
+    background-color: var(--color-white);
+    content: "";
+    top: 10px;
+  }
+  .btn2.open .icon {
+    transition-duration: 0.5s;
+    background: transparent;
+  }
+  .btn2.open .icon:before {
+    transform: rotateZ(45deg) scaleX(1.25) translate(13px, 13px);
+  }
+  .btn2.open .icon:after {
+    transform: rotateZ(-45deg) scaleX(1.25) translate(12px, -12px);
+  }
+  .btn2:hover {
+    cursor: pointer;
+  }
+
+  @media screen and (max-width:768px) {
+    .btn2{
+        display: block;
+    }
+    .navbarPc{
+        display: none;
+    }
+    .mobileMenu{
+        display: flex;
+    }
+  }

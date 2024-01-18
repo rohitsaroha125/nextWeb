@@ -1,35 +1,19 @@
+"use client"
 import Link from "next/link"
+import { usePathname } from "next/navigation"
+import styles from './NavbarLinks.module.css'
+import { NavbarOptions } from "./Navbar"
 
-interface NavbarOptions{
-    title: string,
-    link: string
-}
+const NavbarLinks = ({navbarOptions}: {navbarOptions: NavbarOptions[]}) => {
+    const pathName = usePathname()
 
-const navbarOptions: NavbarOptions[] = [
-    {
-        title:'Home',
-        link:'/'
-    },
-    {
-        title: 'About Us',
-        link: '/about'
-    },
-    {
-        title: 'Blog',
-        link: '/blog'
-    },
-    {
-        title: 'Contact Us',
-        link: '/contact'
-    },
-]
-
-const NavbarLinks = () => {
     return(
-        <div className="flex gap-14">
+        <div className={`flex items-center gap-14 ${styles.navbarPc}`}>
             {
                 navbarOptions.map((option:NavbarOptions, i:number) => {
-                    return <Link href={option.link} key={i}><p className="text-white">{option.title}</p></Link>
+                    return <Link href={option.link} key={i} className={`${
+                        pathName === option.link ? `bg-white text-black py-2 px-4 ${styles.activeNavLink}` : 'text-white'
+                    }`}><p>{option.title}</p></Link>
                 })
             }
         </div>

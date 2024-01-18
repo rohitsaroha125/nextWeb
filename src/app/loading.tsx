@@ -1,8 +1,9 @@
+import styles from './loading.module.css'
+
 const Loading = () => {
   return (
-    <div className="loadingBox">
-      .loader-37
-      <div className="loader-37"></div>
+    <div className={styles.loadingBox}>
+      <div className={styles['loader-37']}></div>
     </div>
   );
 };
