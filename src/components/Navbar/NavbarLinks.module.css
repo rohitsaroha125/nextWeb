@@ -65,7 +65,7 @@
     background: transparent;
   }
   .btn2.open .icon:before {
-    transform: rotateZ(45deg) scaleX(1.25) translate(13px, 13px);
+    transform: rotateZ(45deg) scaleX(1.25) translate(2px, -1px);
   }
   .btn2.open .icon:after {
     transform: rotateZ(-45deg) scaleX(1.25) translate(12px, -12px);

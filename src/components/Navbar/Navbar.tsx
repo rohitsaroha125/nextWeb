@@ -41,7 +41,7 @@ const Navbar = () => {
         <h1 className="text-2xl font-bold text-white">NextWeb</h1>
       </div>
       <NavbarLinks navbarOptions={navbarOptions} />
-      <div className={`${styles.btn2}`} data-menu="2" onClick={toggleMenu}>
+      <div className={`${styles.btn2} ${open ? styles.open : ''}`} data-menu="2" onClick={toggleMenu}>
         <div className={styles.icon}></div>
       </div>
       {open && <MobileNavLinks navbarOptions={navbarOptions} />}
