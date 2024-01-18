@@ -1,0 +1,15 @@
+.brandImg{
+    width: 500px;
+    height: 50px;
+    position: relative;
+    filter: grayscale(1);
+}
+
+.heroImg{
+    width: 100%;
+    position: relative;
+}
+
+.heroImg img{
+    object-fit: contain;
+}

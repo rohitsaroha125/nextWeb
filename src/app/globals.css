@@ -6,7 +6,7 @@
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
-  --background: #131b2f;
+  --background: #0e0c23;
   --color-white: #fff;
   --color-primary: #550cf3;
 }
@@ -21,4 +21,19 @@
 
 body{
   background: var(--background);
+}
+
+.primaryBtn{
+  background: var(--color-primary);
+  padding: 15px 30px;
+  border-radius: 4px;
+  font-weight: 600;
+  color: var(--color-white);
+}
+
+.secondaryBtn{
+  background: var(--color-white);
+  padding: 15px 30px;
+  border-radius: 4px;
+  font-weight: 600;
 }
