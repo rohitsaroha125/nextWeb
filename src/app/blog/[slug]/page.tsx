@@ -1,7 +1,29 @@
-import Image from 'next/image'
+import Image from "next/image";
 
-export default function BlogPost() {
+const getData = async function (slug: number) {
+  const res = await fetch(`https://jsonplaceholder.typicode.com/posts/${slug}`);
+
+  if (!res.ok) {
+    throw new Error("Something went wrong");
+  }
+
+  return res.json();
+};
+
+const BlogPost = async function ({ params }: { params: any }) {
+  const { slug } = params;
+
+  const postData = await getData(slug);
+
+  console.log('postdata is ', postData)
+
   return (
-    <p>Blog Post Page</p>
-  )
-}
+    <>
+      <p className="text-white">Blog Post Page</p>
+      <h1 className="text-white">{postData.title}</h1>
+      <p className="text-white">{postData.body}</p>
+    </>
+  );
+};
+
+export default BlogPost;

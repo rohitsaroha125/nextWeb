@@ -36,7 +36,7 @@ export default function About() {
         <div className="flex gap-10">
             {
                 aboutInfo.map((card, i) => {
-                    return <div>
+                    return <div key={i}>
                     <h4 className={`font-bold text-2xl ${styles.aboutCardHeading}`}>{card.number}</h4>
                     <p className="text-white text-sm">{card.description}</p>
                 </div>
